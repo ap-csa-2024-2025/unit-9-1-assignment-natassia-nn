@@ -4,16 +4,17 @@ public class Person
     private int age;
 
     // TODO: Complete the non-default constructor
-    public Person(String iName, String iAge)
+    public Person(String iName, int iAge)
     {
-
+        this.name = iName;
+        this.age = iAge;
     }
 
     // TODO: Complete the default constructor using "this"
     // Default values should be "John Doe", and 0
     public Person()
     {
-
+        this("John Doe", 0);
     }
 
 
@@ -32,6 +33,6 @@ public class Person
     // out a Person object, it says "A Person named [name], age [age]"
     public String toString()
     {
-        return "Printing a Person object";
+        return "A Person named " + name + ", age " +  age;
     }
 }

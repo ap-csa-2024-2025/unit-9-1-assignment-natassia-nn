@@ -9,10 +9,12 @@ public class Student extends Person
 
     // TODO: Complete the non-default constructor.
     // We want this one to create a Student object with the
-    // given parameter values.
+    // given parameter values. 
     public Student(String iName, String iAge, int iGrade, double igpa)
     {
-
+        super(iName, iAge); // This calls Person(String, int), person is the super class
+        grade = iGrade;
+        gpa = igpa;
     }
 
     // TODO: Complete the non-default constructor.
@@ -20,6 +22,9 @@ public class Student extends Person
     // age 0, with the given grade and gpa.
     public Student(int iGrade, double igpa)
     {
+        super();
+        grade = iGrade;
+        gpa = igpa;
 
     }
 
@@ -28,7 +33,7 @@ public class Student extends Person
     // and GPA of 0.0.
     public Student()
     {
-
+        this("John Doe", 0, 0, 0.0);
     }
 
 
@@ -43,6 +48,15 @@ public class Student extends Person
         return grade;
     }
 
+    public void setGPA(int igpa)
+    {
+        gpa = igpa;
+    }
+
+    public double getGPA()
+    {
+        return gpa;
+    }
     // TODO: Complete the toString method so that when we print
     // out a Student object, it says
     // "A Student named [name], age [age], in grade [grade] with a GPA of [gpa]"
